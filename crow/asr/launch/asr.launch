@@ -1,0 +1,10 @@
+<launch>
+
+   <!--
+    Node for publishing audio inputs
+    -->
+    <node name="speech_rec" pkg="asr" type="SpeechStream.py" output="screen">
+    </node>
+
+	
+</launch>

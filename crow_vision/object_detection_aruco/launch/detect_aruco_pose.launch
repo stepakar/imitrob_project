@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="tf"
+        type="static_transform_publisher"
+        name="link2_broadcaster"
+        args="0.85 -0.05 1.44 -0.7071067811865475 -0.7071067811865475 0.0 0.0 r2_link_0 camera_color_optical_frame 10" />
+  <node pkg="object_detection_aruco"
+        type="detecting_aruco_pose.py"
+        name="averaging_aruco_node" />
+</launch>

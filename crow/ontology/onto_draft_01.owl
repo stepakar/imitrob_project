@@ -1,0 +1,3638 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#"
+     xml:base="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:onto="http://ainf.aau.at/ontodebug#"
+     xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01/0.0.1"/>
+        <onto:testCase>
+            <rdf:Description/>
+        </onto:testCase>
+        <onto:testCase>
+            <rdf:Description/>
+        </onto:testCase>
+        <rdfs:comment>Testing ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ainf.aau.at/ontodebug#axiom -->
+
+    <owl:AnnotationProperty rdf:about="http://ainf.aau.at/ontodebug#axiom">
+        <rdfs:subPropertyOf rdf:resource="http://ainf.aau.at/ontodebug#testCase"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://ainf.aau.at/ontodebug#testCase -->
+
+    <owl:AnnotationProperty rdf:about="http://ainf.aau.at/ontodebug#testCase"/>
+    
+
+
+    <!-- http://ainf.aau.at/ontodebug#type -->
+
+    <owl:AnnotationProperty rdf:about="http://ainf.aau.at/ontodebug#type">
+        <rdfs:subPropertyOf rdf:resource="http://ainf.aau.at/ontodebug#testCase"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#python_name -->
+
+    <owl:AnnotationProperty rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#python_name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#aboveOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#aboveOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#directionalRelation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#belowOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#atTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#atTime">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#startTime"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TimePoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#behindOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#behindOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#directionalRelation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#inFrontOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#belowOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#belowOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#directionalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#center -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#center">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#GeometricObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedToPrismatically -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedToPrismatically">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedToRigidly -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedToRigidly">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedToWeakly"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedToRotationally -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedToRotationally">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedToWeakly -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedToWeakly">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#connectedTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#contains-topo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#contains-topo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#covers-topo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#covers-topo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#directionalRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#directionalRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#disjoint-topo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#disjoint-topo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#endTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#endTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EnduringTemporalThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TimePoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasColor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasColor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ColoredThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Color"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">color</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasCorners -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasCorners">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point2D"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corners</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Location"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasParseTree -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasParseTree">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParsedText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParseTreeNode"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parse_tree</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasPos -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasPos">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tag"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#POS"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pos</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasPose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasPose">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasSubnodes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasSubnodes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParseTreeNode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParseTreeNode"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subnodes</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasTag -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasTag">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TaggedToken"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tag"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tag</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasTags -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasTags">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TaggedText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tag"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tags</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#inCenterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#inCenterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#inFrontOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#inFrontOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#directionalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#insideOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#insideOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#leftOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#leftOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#directionalRelation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#rightOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#nextPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#nextPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialCausalRelation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#prevPoint"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#nextTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#nextTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#occursAfter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#occursAfter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalCausalRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#occursBefore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#occursBefore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalCausalRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#outsideOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#outsideOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#overlap-topo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#overlap-topo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#prevPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#prevPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialCausalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#relativeToSingleObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#relativeToSingleObject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RelativeLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relative_to</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#rightOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#rightOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#directionalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramHasRoot -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramHasRoot">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgram"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramNode"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">root</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramOperandHasParsedText -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramOperandHasParsedText">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramOperand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParsedText"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parsed_text</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramOperandHasTemplate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramOperandHasTemplate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramOperand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Template"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">template</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramOperatorHasChildren -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramOperatorHasChildren">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramOperator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramNode"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">children</owlr:python_name>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialCausalRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialCausalRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#startTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#startTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TimePoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalCausalRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalCausalRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#touchingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#touchingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#topologicalRelations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#visibleFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#visibleFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#withinReachOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#withinReachOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#spatialRelation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#canBePicked -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#canBePicked">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#specialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_can_be_picked</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#duration">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Interval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasArucoId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasArucoId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Cube"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owlr:python_name>aruco_id</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MorphCategory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">description</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasLabel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParseTreeNode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">label</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasOrigText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasOrigText">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParsedText"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orig_text</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasParameters -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasParameters">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Template"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parameters</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasToken -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasToken">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TaggedToken"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">token</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasTokens -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#hasTokens">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TaggedText"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tokens</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#isInWorkspace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#isInWorkspace">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#specialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_is_in_workspace</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#isLastMentioned -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#isLastMentioned">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#specialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_is_last_mentioned</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#isPicked -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#isPicked">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#specialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owlr:python_name>_is_picked</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#msecs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#msecs">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TimePoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Milliseconds, counted from the last whole second</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#nsecs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#nsecs">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TimePoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Nanoseconds (10^-9), counted from the last whole second</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#pointCoordinates -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#pointCoordinates">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#qu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#qu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#quaternionComponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#quaternionComponent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#quaternionComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Quaternion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#qx -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#qx">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#quaternionComponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#qy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#qy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#quaternionComponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#qz -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#qz">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#quaternionComponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#relativeLocationType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#relativeLocationType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RelativeLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loc_type</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramOperatorHasType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#robotProgramOperatorHasType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramOperator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operator_type</owlr:python_name>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#secs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#secs">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TimePoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Seconds, usually counting from the begining of the &quot;Epoch&quot;</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#specialProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#specialProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#temporalProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#x -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#x">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#pointCoordinates"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#y -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#y">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#pointCoordinates"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#z -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#z">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#pointCoordinates"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Absorbed_Dose_Rate_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Absorbed_Dose_Rate_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiology_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Absorbed_Dose_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Absorbed_Dose_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiology_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Acceleration_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Acceleration_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EnduringTemporalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ActionResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ActionResult">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_ABORTED"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_COMPLETED"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_ERROR"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_OUT_OF_RESOURCES"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_TIMEOUT"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Activity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Activity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiology_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Adhesive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Adhesive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Consumable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Agent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Agent">
+        <rdfs:comment>A thing capable of acting</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Algorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ComputationalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Amount_Of_Substance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Amount_Of_Substance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Amount_of_substance_temperature_unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Amount_of_substance_temperature_unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angle_unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angle_unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Dimensionless_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#AngularDistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#AngularDistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angular_Acceleration_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angular_Acceleration_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Acceleration_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angular_Mass_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angular_Mass_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angular_Momentum_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angular_Momentum_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Momentum_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angular_Velocity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angular_Velocity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Velocity_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ApplyGlueTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ApplyGlueTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Template"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#GeometricObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Angle_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Angle_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Temperature_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Temperature_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Thermal_Expansion_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Thermal_Expansion_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Expansion_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Time_Temperature_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Time_Temperature_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Atomic_Charge_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Atomic_Charge_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Atomic_Physics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Atomic_Mass_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Atomic_Mass_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Atomic_Physics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Atomic_Physics_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Atomic_Physics_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Base_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Base_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Bending_Moment_Or_Torque_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Bending_Moment_Or_Torque_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Binary_Prefix_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Binary_Prefix_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Prefix_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Biomedical_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Biomedical_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Science_And_Engineering_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Block -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Block">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexVolume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Bolt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Bolt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#DrivableFastener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Capacitance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Capacitance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#CartesianCoordinateSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#CartesianCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#CoordinateSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Catalytic_Activity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Catalytic_Activity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ChemicalGlue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ChemicalGlue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Adhesive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Clamp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Clamp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ClampingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ClampingTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ClampingTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Coefficient_Of_Heat_Transfer_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Coefficient_Of_Heat_Transfer_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Color -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Color">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PersistentProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ColoredThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ColoredThing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#VisibleThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Communications_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Communications_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Science_And_Engineering_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ComputationalThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ComputationalThing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Computing_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Computing_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Science_And_Engineering_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConcaveArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConcaveArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConcaveVolume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConcaveVolume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexVolume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Concentration_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Concentration_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Conductance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Conductance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Consumable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Consumable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TangibleObject"/>
+        <rdfs:comment>Materials used in the assembly, usually to connect the assembled objects</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexVolume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexVolume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#CoordinateSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#CoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#FrameOfReference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Counting_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Counting_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Dimensionless_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resource_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#CovarianceMatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#CovarianceMatrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Matrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Cube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Cube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Currency_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Currency_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Financial_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Current_Per_Angle_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Current_Per_Angle_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Curvature_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Curvature_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Cylinder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Cylinder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexVolume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Data_Rate_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Data_Rate_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Computing_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resource_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Decimal_Prefix_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Decimal_Prefix_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Prefix_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SI_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Derived_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Derived_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Dimensionless_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Dimensionless_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Distance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Distance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Distance-Absolute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Distance-Absolute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Distance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Dose_Equivalent_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Dose_Equivalent_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiology_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#DrivableFastener -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#DrivableFastener">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Fastener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#DrivingTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#DrivingTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Dynamic_Viscosity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Dynamic_Viscosity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Area_Density_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Area_Density_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Density_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Density_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Density_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Line_Density_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Line_Density_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Density_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Per_Amount_Of_Substance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Per_Amount_Of_Substance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electrochemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Volume_Density_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Volume_Density_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Density_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Current_Density_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Current_Density_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Current_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Current_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Dipole_Moment_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Dipole_Moment_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Field_Strength_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Field_Strength_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Flux_Density_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Flux_Density_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Charge_Density_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Flux_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electric_Flux_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electrochemistry_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electrochemistry_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EmbodiedAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EmbodiedAgent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Actor"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EnduringLocalizedThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EnduringLocalizedThing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EnduringTemporalThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EnduringTemporalThing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_And_Work_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_And_Work_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_Density_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_Density_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_Per_Area_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_Per_Area_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_and_work_per_mass_amount_of_substance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_and_work_per_mass_amount_of_substance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_per_Electric_Charge_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Energy_per_Electric_Charge_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TangibleObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+        <rdfs:comment>A &quot;temporal object&quot; or a thing that can be localized in time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Event_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Event_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resource_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ExplicitParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ExplicitParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Exposure_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Exposure_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiology_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Fastener -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Fastener">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Consumable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Financial_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Financial_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resource_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#FlatScrewdriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#FlatScrewdriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Screwdriver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Force_Per_Electric_Charge_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Force_Per_Electric_Charge_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Force_Per_Length_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Force_Per_Length_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Force_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Force_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#FrameOfReference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#FrameOfReference">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Frequency_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Frequency_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#GeometricObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#GeometricObject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Glue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Glue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Adhesive"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#GrabTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#GrabTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Template"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Gravitational_Attraction_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Gravitational_Attraction_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Hammer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Hammer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#InsertingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HandTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HandTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Heart_Rate_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Heart_Rate_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Biomedical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Heat_Capacity_And_Entropy_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Heat_Capacity_And_Entropy_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Heat_Flow_Rate_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Heat_Flow_Rate_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Height -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Height">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Distance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HeightAboveGround -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HeightAboveGround">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Distance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HexColor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HexColor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Color"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HexScrewdriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HexScrewdriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Screwdriver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HotMeltGlue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#HotMeltGlue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Adhesive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EmbodiedAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Human_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Human_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resource_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Illuminance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Illuminance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Photometry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ImplicitParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ImplicitParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Inductance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Inductance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Information_Entropy_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Information_Entropy_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Computing_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Logarithmic_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resource_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#InsertableFastener -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#InsertableFastener">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Fastener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#InsertingTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#InsertingTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Interval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Interval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EnduringTemporalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Inverse_Amount_Of_Substance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Inverse_Amount_Of_Substance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Kinematic_Viscosity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Kinematic_Viscosity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LearnNewTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LearnNewTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Template"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Length_Temperature_Time_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Length_Temperature_Time_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Length_Temperature_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Length_Temperature_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Length_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Length_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Light_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Light_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Acceleration_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Acceleration_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Acceleration_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Energy_Transfer_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Energy_Transfer_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Atomic_Physics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Momentum_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Momentum_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Momentum_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Thermal_Expansion_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Thermal_Expansion_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Expansion_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Velocity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Linear_Velocity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Velocity_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Event"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedSituation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedSituation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#GeometricObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Logarithmic_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Logarithmic_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Photometry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminous_Efficacy_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminous_Efficacy_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Photometry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminous_Energy_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminous_Energy_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Photometry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminous_Flux_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminous_Flux_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Photometry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminous_Intensity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Luminous_Intensity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Photometry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Magnetic_Field_Strength_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Magnetic_Field_Strength_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Magnetic_Flux_Density_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Magnetic_Flux_Density_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Magnetic_Flux_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Magnetic_Flux_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Magnetomotive_Force_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Magnetomotive_Force_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MeasurableQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Amount_Of_Substance_Temperature_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Amount_Of_Substance_Temperature_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Amount_Of_Substance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Amount_Of_Substance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Per_Area_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Per_Area_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Per_Length_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Per_Length_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Per_Time_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Per_Time_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Per_Volume_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Per_Volume_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Temperature_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Temperature_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mass_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MaterialThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MaterialThing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#VisibleThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalObject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalOrdering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalOrdering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RelationalStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalThing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ComputationalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Matrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Matrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MeasurableQuantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MeasurableQuantity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Microbial_Formation_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Microbial_Formation_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Biomedical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Molal_Concentration_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Molal_Concentration_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Concentration_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Molar_Concentration_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Molar_Concentration_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Concentration_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Molar_Energy_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Molar_Energy_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Chemistry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Molar_Heat_Capacity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Molar_Heat_Capacity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Momentum_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Momentum_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MorphCategory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MorphCategory">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Nail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Nail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#InsertableFastener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_BLACK"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_BLUE"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_CYAN"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_GREEN"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_MAGENTA"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_RED"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_WHITE"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_YELLOW"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Color"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Non_SI_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Non_SI_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Not_Used_With_SI_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Not_Used_With_SI_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Non_SI_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Nut -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Nut">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Fastener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Nutdriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Nutdriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#DrivingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EnduringLocalizedThing"/>
+        <rdfs:comment>Physical object realized in the real world</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ObjectProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ObjectProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ObjectRecognitionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ObjectRecognitionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Orientation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Orientation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Orientation2D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Orientation2D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Orientation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Orientation3D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Orientation3D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Orientation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#POS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#POS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MorphCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Panel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Panel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ComputationalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParseTreeNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParseTreeNode">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParsedText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ParsedText">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PartialOrdering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PartialOrdering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalOrdering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PartialOrdering-Strict -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PartialOrdering-Strict">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalOrdering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#GeometricObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint2D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint2D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint3D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint3D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PathPoint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Peg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Peg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#InsertableFastener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Permeability_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Permeability_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Permittivity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Permittivity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PersistentProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PersistentProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PhilipsScrewdriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PhilipsScrewdriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Screwdriver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Photometry_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Photometry_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Light_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PhysicalSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PhysicalSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Science_And_Engineering_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Plane_Angle_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Plane_Angle_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angle_unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pliers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pliers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ClampingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point2D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point2D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point3D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point3D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose4DoF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose4DoF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose"/>
+        <rdfs:comment>Pose in a 3D space with 1 additional degree of freedom - pitch angle. That is, the object can rotate on a plane within the space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose5DoF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose5DoF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose4DoF"/>
+        <rdfs:comment>Pose in a 3D space with 2 additional degrees of freedom - pitch and yaw angle. That is, the object can rotate on 2 planes within the space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose6DoF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose6DoF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose5DoF"/>
+        <rdfs:comment>Full pose within a 3D space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PosePlanar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PosePlanar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pose"/>
+        <rdfs:comment>Planar pose, i.e. pose on a 2D plane with rotation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PowerTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#PowerTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Power_Per_Area_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Power_Per_Area_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Power_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Power_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Prefix_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Prefix_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Dimensionless_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pressure_Or_Stress_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pressure_Or_Stress_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pressure_or_stress_rate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Pressure_or_stress_rate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Quaternion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Quaternion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RF-Power_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RF-Power_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Communications_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiometry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiant_Intensity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiant_Intensity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiometry_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiology_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiology_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiometry_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Radiometry_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Light_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Rate_Of_Return_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Rate_Of_Return_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Financial_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Rectangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Rectangle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RelationalStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RelationalStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RelativeLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RelativeLocation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resistance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resistance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Electricity_And_Magnetism_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resource_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Resource_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Respiratory_Rate_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Respiratory_Rate_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Biomedical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EmbodiedAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ComputationalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ComputationalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramOperand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramOperand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramOperator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramOperator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RobotProgramNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RotationMatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RotationMatrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Matrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RotationMatrix2D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RotationMatrix2D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RotationMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RotationMatrix3D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RotationMatrix3D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#RotationMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SI_Base_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SI_Base_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Base_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SI_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SI_Derived_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SI_Derived_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Derived_Unit"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SI_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SI_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SI_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ScalarInterval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ScalarInterval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TupleOfIntervals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Science_And_Engineering_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Science_And_Engineering_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Screw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Screw">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#DrivableFastener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Screwdriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Screwdriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#DrivingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Serum_Or_Plasma_Level_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Serum_Or_Plasma_Level_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Biomedical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Signal_Detection_Threshold_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Signal_Detection_Threshold_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Communications_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Situation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Situation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#EnduringTemporalThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Event"/>
+        <rdfs:comment>An event with a duration (aka EnduringEvent)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Solid_Angle_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Solid_Angle_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Angle_unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Spanner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Spanner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Nutdriver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialQuantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialQuantity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MeasurableQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialThing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Specific_Energy_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Specific_Energy_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Specific_Heat_Capacity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Specific_Heat_Capacity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Specific_Heat_Pressure_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Specific_Heat_Pressure_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Specific_Heat_Volume_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Specific_Heat_Volume_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Sphere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Sphere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ConvexVolume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tag">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TaggedText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TaggedText">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TaggedToken -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TaggedToken">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TangibleObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TangibleObject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ColoredThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tape">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Adhesive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Temperature_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Temperature_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Temperature_per_time_unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Temperature_per_time_unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Template -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Template">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ComputationalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Conductivity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Conductivity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Diffusivity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Diffusivity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Energy_Length_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Energy_Length_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Energy_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Energy_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Expansion_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Expansion_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Insulance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Insulance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Resistance_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Resistance_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Resistivity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Resistivity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermodynamics_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Physical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thrust_To_Mass_Ratio_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thrust_To_Mass_Ratio_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TimePoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TimePoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TemporalThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Time_Area_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Time_Area_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Time_Squared_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Time_Squared_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Time_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Time_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TangibleObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TorxScrewdriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TorxScrewdriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Screwdriver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Trajectory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Trajectory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Path"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tuple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tuple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TupleOfIntervals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TupleOfIntervals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Tuple"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Turbidity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Turbidity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Biomedical_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Unit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Used_With_SI_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Used_With_SI_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Non_SI_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Vector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Vector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#MathematicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Velocity_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Velocity_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Video_Frame_Rate_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Video_Frame_Rate_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Computing_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#VisibleThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#VisibleThing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#LocalizedThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#GeometricObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#SpatialQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_Per_Time_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_Per_Time_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_Thermal_Expansion_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_Thermal_Expansion_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Thermal_Expansion_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Space_And_Time_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_per_Time_Squared_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_per_Time_Squared_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_per_mass_unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume_per_mass_unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Mechanics_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Washer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Washer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Fastener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Width -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Width">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Distance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Workpiece -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Workpiece">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#TangibleObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Wrench -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Wrench">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Nutdriver"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_ABORTED -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_ABORTED">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ActionResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_COMPLETED -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_COMPLETED">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ActionResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_ERROR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_ERROR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ActionResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_OUT_OF_RESOURCES -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_OUT_OF_RESOURCES">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ActionResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_TIMEOUT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ACTION_TIMEOUT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#ActionResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_BLACK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_BLACK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_BLUE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_BLUE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_CYAN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_CYAN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_GREEN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_GREEN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_MAGENTA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_MAGENTA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_RED -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_RED">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_WHITE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_WHITE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_YELLOW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#COLOR_YELLOW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#NamedColor"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint3D SubClassOf PathPoint</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint3D SubClassOf PathPoint</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint3D SubClassOf PathPoint</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint3D SubClassOf PathPoint</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint3D SubClassOf PathPoint</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint2D SubClassOf Point2D</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint2D SubClassOf Point2D</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint3D SubClassOf PathPoint</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint2D SubClassOf Point2D</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint2D SubClassOf Point2D</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint2D SubClassOf Point2D</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint3D SubClassOf PathPoint</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint2D SubClassOf Point2D</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    <rdf:Description>
+        <onto:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PathPoint2D SubClassOf Point2D</onto:axiom>
+        <onto:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</onto:type>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Area"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Point"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/crow/ontologies/2019/6/onto_draft_01#Volume"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

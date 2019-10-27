@@ -1,0 +1,35 @@
+<!--
+This launch file was created by Marek Jaluvka for robot_chess_player project
+
+-->
+
+<launch>
+
+    <arg name="device" default="0"/>
+    <arg name="show" default="false"/>
+
+
+
+
+    <node pkg="tuw_aruco" type="aruco_node" name="arMarkerAruco" output="screen">
+        <param name="marker_dictonary" value="ARUCO"/>
+
+        <param name="pose_estimation_enabled" value="true"/>
+        <param name="publish_markers" value="true"/>
+        <param name="publish_fiducials" value="true"/>
+
+        <remap from="image" to="/camera/color/image_raw"/>
+        <remap from="camera_info" to="/camera/color/camera_info"/>
+        <remap from="markers" to="/markersAruco"/>
+        <remap from="fiducials" to="/fiducialsAruco"/>
+    </node>
+
+    <node pkg="tuw_marker_pose_estimation" type="pose_estimation_markermap_node" name="arPoseEstimation" output="screen" launch-prefix="gdb -ex run --args">
+        <param name="marker_map_config" value="$(find tuw_marker_pose_estimation)/launch/demo_aruco_markermap_config.xml" />
+
+        <remap from="fiducials" to="/fiducialsAruco"/>
+        <remap from="markers" to="/markersPoseEstimation"/>
+    </node>
+
+
+</launch>
